@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Math2GGB Generator</title>
+<!-- Loads the real GeoGebra engine (needs internet: geogebra.org CDN). -->
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+<style>html,body{margin:0;background:#fff}</style>
+</head>
+<body>
+<div id="ggb"></div>
+<script>
+  // window.ggbApplet -> the JS API you drive from the browser (evalCommand, setColor, getBase64, ...)
+  // window.__ready   -> true once the engine finished loading
+  window.__ready = false;
+  var applet = new GGBApplet({
+    appName: 'classic',
+    width: 1100, height: 820,
+    // IMPORTANT: use an algebra+graphics ('AG') layout, NOT graphics-only ('G').
+    // The 'G' export writes a broken perspective (pane divider ~0.99) that squishes
+    // the graphics view to ~1% width -> file opens BLANK in desktop GeoGebra.
+    perspective: 'AG',
+    showToolBar: true, showAlgebraInput: true, showMenuBar: false,
+    showResetIcon: false, enableRightClick: true, showZoomButtons: true,
+    appletOnLoad: function (api) { window.ggbApplet = api; window.__ready = true; }
+  }, true);
+  applet.inject('ggb');
+</script>
+</body>
+</html>
