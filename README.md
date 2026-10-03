@@ -32,9 +32,19 @@ Skill 整份放在 `.cursor/skills/math2ggb/`（上游 `GordenSun/Math2GGB`，co
 
 伺服器把 base64 解碼寫成 `examples/*.ggb`。每個檔都是 zip，內有引擎寫出的 `geogebra.xml`（GeoGebra Classic 5.4）。曾把動態檔 `setBase64` 載回同一個 applet：`C` 仍是 `Point on c`，∠BAC = 35°，「顯示輔助」為關閉，直角與說明文字隱藏。
 
-## 開啟
+## 已上傳到 GeoGebra
 
-在 GeoGebra Classic 或 [geogebra.org/classic](https://www.geogebra.org/classic) 開啟。macOS App Store 版若雙擊出現空白，請用選單「打開 → 從這部裝置」選檔，或把檔案拖進 GeoGebra 視窗。
+三份檔已 POST 到 `https://www.geogebra.org/upload`。GeoGebra 不提供免登入的公開材質網址，下面的連結會要求登入你的 GeoGebra 帳號（或 Google），登入後才會存進你的 Materials：
+
+| 圖 | 領取連結 |
+| --- | --- |
+| 靜態復刻 | https://www.geogebra.org/upload/6ac08d86a7483 |
+| 可拖動 | https://www.geogebra.org/upload/6ac08d8db3c3b |
+| 顯示輔助 | https://www.geogebra.org/upload/6ac08d8dd90bb |
+
+## 開啟本機檔
+
+在 GeoGebra Classic 或 [geogebra.org/classic](https://www.geogebra.org/classic) 開啟 `examples/` 裡的檔案。macOS App Store 版若雙擊出現空白，請用選單「打開 → 從這部裝置」選檔，或把檔案拖進 GeoGebra 視窗。
 
 ## 限制
 
